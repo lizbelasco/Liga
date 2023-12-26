@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified" targetNamespace="http://soa.com">
+	<xs:element name="marcadoresLizbeth">
+		<xs:complexType>
+				<xs:sequence>
+					<xs:element name="liga">
+						<xs:complexType>
+							<xs:sequence>
+							<xs:element name="pais" type="xs:string"/>
+								<xs:element name="partido" maxOccurs="10">
+									<xs:complexType>
+										<xs:sequence>
+											<xs:element name="equipo-1" type="xs:int"/>
+											<xs:element name="equipo-1-nombre" type="xs:string"/>
+											<xs:element name="equipo-2" type="xs:int"/>
+											<xs:element name="equipo-2-nombre" type="xs:string"/>
+										</xs:sequence>
+									</xs:complexType>
+								</xs:element>
+							</xs:sequence>
+						</xs:complexType>
+					</xs:element>
+				</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="maximo-goleadorVelasco">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="equipo" type="xs:string" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>
